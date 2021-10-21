@@ -11,17 +11,39 @@
       crossorigin="anonymous"
     />
     <!-- <link href="../node_modules/@pnotify/core/dist/BrightTheme.css" rel="stylesheet" type="text/css" /> -->
-
   </head>
   <body>
+    <main>
+      <h1>Countries info</h1>
+      <label class="search">
+        <span class="search__intro">I search:</span>
+        <input class="search__input" type="text" id="filter" placeholder="Enter the country name" />
+      </label>
+      <div class="js-result"></div>
+
+      <div class="test-markup">
+        <h2 class="country__name">Ukraine</h2>
+        <div class="country__wrap">
+          <div class="country__info">
+            <p class="country__capital"><span class="bold">Capital: </span>Kiyv</p>
+            <p class="country__population"><span class="bold">Population: </span>48000000</p>
+            <p class="country__languages"><span class="bold">Languages:</span>
+              <ul >
+                <li class="country__language">Ukrainian</li>
+                <li class="country__language">Russian</li>
+                <li class="country__language">English</li>
+              </ul>
+            </p>
+          </div>
+          <div class="country__flag">
+            <img class="" width="100%" src="https://flagcdn.com/ua.svg" alt="flag of Ukraine" />
+          </div>
+        </div>
+      </div>
+      
+    </main>
     <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
     <!-- <include src="./partials/example.html"></include> -->
-    <label>
-      <span>I search:</span>
-      <input type="text" id="filter" placeholder="Enter the country name" />
-    </label>
-    <div class="message"></div>
-
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
   </body>

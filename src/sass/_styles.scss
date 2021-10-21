@@ -3,3 +3,33 @@ body {
   font-size: 24px;
   background-color: #ccc;
 }
+
+main {
+  max-width: 800px;
+  margin: 10px auto;
+  padding: 20px;
+  outline: 2px solid green;
+}
+
+.search__input {
+  padding: 15px;
+}
+
+// country info
+.country__name {
+  text-align: center;
+}
+
+.country__wrap {
+  display: flex;
+}
+.country__info {
+  width: 50%;
+}
+.country__flag {
+  width: 50%;
+}
+
+.bold {
+  font-weight: bold;
+}
