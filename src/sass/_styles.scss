@@ -11,8 +11,13 @@ main {
   outline: 2px solid green;
 }
 
+h1 {
+  text-align: center;
+}
+
 .search__input {
   padding: 15px;
+  line-height: 1.3;
 }
 
 // country info
