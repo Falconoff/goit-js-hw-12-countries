@@ -13,8 +13,8 @@ const refs = {
   result: document.querySelector('.js-result'),
 };
 
-// ВВОДИМ ЗАПРОС
-refs.input.addEventListener('input', debounce(onInput, 1000));
+// input query
+refs.input.addEventListener('input', debounce(onInput, 500));
 
 const countriesApiService = new CountriesApi();
 
@@ -28,6 +28,7 @@ function clearResultField() {
   refs.result.innerHTML = '';
 }
 
+// analize result
 function doAnalysis(arr) {
   if (arr.length < 1 || arr.length === undefined) {
     showErrorMessage('No matches found.');
@@ -71,7 +72,7 @@ function showErrorMessage(text) {
   error({
     text: text,
     type: 'error',
-    delay: 3000,
+    delay: 2000,
     maxTextHeight: null,
     width: '400px',
   });
