@@ -1,15 +1,25 @@
 export default class CountriesApi {
-  constructor() {}
+  constructor() {
+    this.searchQuery = '';
+  }
 
-  fetchCountries(searchQuery) {
-    const url = `https://restcountries.com/v2/name/${searchQuery}`;
-    fetch(url)
+  fetchCountries() {
+    const url = `https://restcountries.com/v2/name/${this.searchQuery}`;
+    return fetch(url)
       .then(r => r.json())
-      .then(r => myF(r))
+      .then(res => {
+        return res;
+      })
       .catch(err => {
         console.error('Error: ', err);
       });
-    // .then(r => console.log(r));
+  }
+
+  get query() {
+    return this.searchQuery;
+  }
+
+  set query(newQuery) {
+    this.searchQuery = newQuery;
   }
 }
-// fetch('https://restcountries.com/v2/name/ru').then(r => r.json());
